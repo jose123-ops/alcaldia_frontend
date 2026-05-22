@@ -20,6 +20,10 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/dashboard/dashboard.page')
       .then(m => m.DashboardPage)
+  },
+  {
+    path: 'activos-fijo',
+    loadComponent: () => import('./pages/activos-fijo/activos-fijo.page').then( m => m.ActivosFijoPage)
   }
 
 ];

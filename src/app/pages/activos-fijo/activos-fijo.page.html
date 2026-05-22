@@ -1,0 +1,160 @@
+<ion-header>
+
+<app-header
+  titulo="activos fijos">
+</app-header>
+
+</ion-header>
+
+
+
+<ion-content>
+ 
+
+  <div class="container">
+
+    <!-- FILTROS -->
+
+    <div class="filters">
+
+      <ion-item>
+
+        <ion-select
+          placeholder="Área">
+
+          <ion-select-option value="informatica">
+            Informática
+          </ion-select-option>
+
+          <ion-select-option value="finanzas">
+            Finanzas
+          </ion-select-option>
+
+        </ion-select>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-select
+          placeholder="Año">
+
+          <ion-select-option value="2025">
+            2025
+          </ion-select-option>
+
+          <ion-select-option value="2024">
+            2026
+          </ion-select-option>
+
+        </ion-select>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-input
+          placeholder="Buscar activo">
+        </ion-input>
+
+      </ion-item>
+
+      
+
+    </div>
+
+  <div class="acciones">
+
+      <ion-button color="success" shape="round"
+        (click)="nuevoActivo()">
+
+        Nuevo Activo
+
+      </ion-button>
+
+    </div>
+    <!-- TABLA -->
+
+    <div class="table-container">
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>Año</th>
+            <th>Código</th>
+            <th>Descripción</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Serie</th>
+            <th>Estado</th>
+            <th>Precio</th>
+            <th>Ubicación</th>
+            <th>Acciones</th>
+
+          </tr>
+
+        </thead>
+
+       <tbody>
+
+  <tr *ngFor="let activo of activos">
+
+    <td>
+      {{ activo.anio }}
+    </td>
+
+    <td>
+      {{ activo.codigo }}
+    </td>
+
+    <td>
+      {{ activo.descripcion }}
+    </td>
+
+    <td>
+      {{ activo.marca }}
+    </td>
+
+    <td>
+      {{ activo.modelo }}
+    </td>
+
+    <td>
+      {{ activo.serie }}
+    </td>
+
+    <td>
+      {{ activo.estado }}
+    </td>
+
+    <td>
+      C$ {{ activo.precio }}
+    </td>
+
+    <td>
+      {{ activo.ubicacion }}
+    </td>
+
+    <td>
+      <ion-button color="primary" size="small">
+  <ion-icon slot="icon-only" ios="logo-apple" md="settings-sharp"></ion-icon>
+</ion-button>
+
+  <ion-button color="danger" size="small">
+  <ion-icon slot="icon-only" ios="logo-apple" md="settings-sharp"></ion-icon>
+</ion-button>
+    </td>
+
+  </tr>
+
+</tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,184 @@
+<ion-header>
+
+  <ion-toolbar color="primary">
+
+    <ion-title>
+
+      Nuevo Activo
+
+    </ion-title>
+
+    <ion-buttons slot="end">
+
+      <ion-button
+        (click)="cerrar()">
+
+        Cerrar
+
+      </ion-button>
+
+    </ion-buttons>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <div class="container">
+
+    <ion-item>
+
+      <ion-input
+        label="Año"
+        [(ngModel)]="activo.anio">
+      </ion-input>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-input
+        label="Código"
+        [(ngModel)]="activo.codigo">
+      </ion-input>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-input
+        label="Código Contable"
+        [(ngModel)]="activo.codigo_Contable">
+      </ion-input>
+
+    </ion-item>
+
+      <ion-item>
+
+      <ion-input
+        label="Color"
+        [(ngModel)]="activo.color">
+      </ion-input>
+
+    </ion-item>
+
+      <ion-item>
+
+      <ion-input
+        label="Comprobante"
+        [(ngModel)]="activo.comprobante">
+      </ion-input>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-input
+        label="Descripción"
+        [(ngModel)]="activo.descripcion">
+      </ion-input>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-input
+        label="Marca"
+        [(ngModel)]="activo.marca">
+      </ion-input>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-input
+        label="Modelo"
+        [(ngModel)]="activo.modelo">
+      </ion-input>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-input
+        label="Serie"
+        [(ngModel)]="activo.serie">
+      </ion-input>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-input
+        label="Precio"
+        type="number"
+        [(ngModel)]="activo.precio">
+      </ion-input>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-select
+        label="Estado"
+        [(ngModel)]="activo.estado">
+
+        <ion-select-option value="Bueno">
+          Bueno
+        </ion-select-option>
+
+        <ion-select-option value="Regular">
+          Regular
+        </ion-select-option>
+
+        <ion-select-option value="Malo">
+          Malo
+        </ion-select-option>
+
+      </ion-select>
+
+    </ion-item>
+
+      <ion-item>
+
+      <ion-input
+        label="factura"
+        [(ngModel)]="activo.factura">
+      </ion-input>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-input
+        label="Ubicación"
+        [(ngModel)]="activo.ubicacion">
+      </ion-input>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-textarea
+        label="Observación"
+        [(ngModel)]="activo.observacion">
+      </ion-textarea>
+
+    </ion-item>
+
+    <ion-button
+
+      expand="block"
+
+      class="guardar-btn"
+
+      (click)="guardar()">
+
+      Guardar Activo
+
+    </ion-button>
+
+  </div>
+
+</ion-content>

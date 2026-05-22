@@ -28,4 +28,35 @@ export class ApiService {
 
   }
 
+  guardarActivo(data:any){
+
+  return this.http.post(
+
+    `${this.url}/activos`,
+    data
+
+  );
+
+}
+
+obtenerActivos(){
+
+  return this.http.get(
+
+    `${this.url}/activos`
+
+  );
+
+}
+
+estadisticas(){
+
+  return this.http.get(
+
+    `${this.url}/activos/estadisticas`
+
+  );
+
+}
+
 }
